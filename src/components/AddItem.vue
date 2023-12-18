@@ -1,16 +1,10 @@
 <!-- eslint-disable @typescript-eslint/no-empty-function -->
 <template>
-  <form class="form" @submit.prevent="submit">
-    <div class="mb-3">
-      <label class="form-label"> Name </label>
-      <input v-model="inputs.name" type="text" class="form-control" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label"> URL </label>
-      <input v-model="inputs.url" type="text" class="form-control" />
-    </div>
-    <button type="submit" class="btn btn-success">
-      Add
+  <form class="form px-3" @submit.prevent="submit">
+      <input v-model="inputs.name" type="text" class="form-control mb-3" placeholder="Name"/>
+            <input v-model="inputs.url" type="text" class="form-control mb-3" placeholder="URL" /> 
+    <button type="submit" class="btn btn-success mb-1">
+        Add
     </button>
   </form>
 </template>
@@ -33,3 +27,16 @@ export default defineComponent({
     
 })
 </script>
+
+<style scoped>
+.btn-success {
+    width: 100%;
+}
+@media screen and (min-width: 500px) {
+    .btn-success {width: 50%;}
+}
+@media screen and (min-width: 1200px) {
+    .btn-success {width: 20%;}
+}
+
+</style>
